@@ -1,0 +1,436 @@
+/* Réinitialisation des marges et padding pour tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin:auto ;/* Centre le conteneur */
+    padding: 0; /* Assure qu'il n'y a pas de padding */
+    display: flex;
+    justify-content: center; /* Centre le tableau horizontalement */
+    align-items: center; /* Centre le tableau verticalement si nécessaire */
+}
+
+header {
+    background-color: #004d40;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+}
+
+header .logo h1 {
+    margin-left: 20px;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #003d34;
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle i {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px 0;
+}
+
+.intro {
+    background: #e0f2f1;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-buttons .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #004d40;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-buttons .button:hover {
+    background-color: #003d34;
+}
+
+.features {
+    padding: 40px 0;
+    background: #ffffff;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.feature {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.feature i {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Styles pour le menu responsive */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #004d40;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-right: 20px;
+    }
+    
+    nav.active {
+        display: flex;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        border-bottom: 1px solid #003d34;
+    }
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0; /* Supprimer les marges */
+    padding: 0; /* Supprimer le padding */
+    box-sizing: border-box; /* Assurer que le padding et les bordures sont inclus dans la largeur totale */
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    box-sizing: border-box; /* Assurer que le padding et les bordures sont inclus dans la largeur totale */
+}
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+h2 {
+    margin-top: 20px;
+}
+/* Style commun pour tous les formulaires */
+.form-common {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.form-common label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-common input[type="text"],
+.form-common input[type="number"],
+.form-common input[type="email"],
+.form-common input[type="tel"],
+.form-common input[type="password"],
+.form-common input[type="date"],
+.form-common textarea,
+.form-common select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-common input[type="submit"]{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-common input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.form-common input[type="reset"] {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-common input[type="reset"]:hover {
+    background-color: #c62828;
+}
+
+.form-title h2 {
+    display: inline-block;
+    padding: 20px 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    position: relative;
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+/* Styles pour la section À Propos */
+.about {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.about .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.about h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.about ul li {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.about ul li::before {
+    content: "\2022"; /* Bullet point */
+    color: #4CAF50; /* Bullet point color */
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Styles pour le logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo-image {
+    height: 100px;
+    width:100px;
+    margin-right: 10px; /* Espace entre le logo et le texte */ 
+}
+
+/* Reset CSS 
+.search-container {
+    position:absolute;
+    top:80px;
+    left:440px;
+}*/
+ #nomPatient{
+    position:absolute;
+    top:93px;
+    left:440px;
+ }
+.search-container form {
+    display: flex;
+    align-items: center; /* Centrer verticalement */
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1; /* Permet à l'input de prendre tout l'espace disponible */
+    margin-right: 10px; /* Espacement entre l'input et le bouton */
+}
+
+.search-container button {
+    /*padding: 8px 16px;*/
+    background-color: #230ab4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position:absolute;
+    left:620px;
+    top:88px;
+}
+
+.search-container button:hover {
+    background-color: #575757;
+}
+
+
+
+/* Styles d'impression */
+@media print {
+    body {
+        font-size: 12px; /* Ajustez la taille de la police pour l'impression */
+    }
+
+    .container {
+        width: 100%; /* Assurez-vous que le conteneur occupe toute la largeur de la page imprimée */
+    }
+
+    header, footer {
+        display: none; /* Masquez les en-têtes et pieds de page si vous ne souhaitez pas les imprimer */
+    }
+
+    button {
+        display: none; /* Masquez le bouton d'impression sur la version imprimée */
+    }
+
+    table {
+        width: 100%; /* Assurez-vous que le tableau occupe toute la largeur de la page imprimée */
+        border-collapse: collapse; /* Évitez les bordures doubles */
+    }
+
+    th, td {
+        border: 1px solid #ddd; /* Ajoutez une bordure aux cellules du tableau */
+        padding: 8px; /* Ajustez le padding pour une meilleure lisibilité */
+    }
+
+    thead {
+        display: table-header-group; /* Assurez-vous que l'en-tête du tableau est imprimé sur chaque page */
+    }
+
+    tbody {
+        display: table-row-group; /* Assurez-vous que les lignes du tableau sont imprimées correctement */
+    }
+}
+/*style pour les bouton (imprimer)*/
+button {
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px; /* Espacement sous le bouton */
+    margin-right: 100px;
+}
+
+button:hover {
+    background-color: #003d34;
+}
+.manage-section{
+    margin: 35px;
+}
